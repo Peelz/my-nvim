@@ -7,6 +7,10 @@ return {
     end,
   },
   {
+    "mfussenegger/nvim-dap",
+    config = function() end,
+  },
+  {
     "scalameta/nvim-metals",
     ft = { "scala", "sbt" },
     dependencies = {
