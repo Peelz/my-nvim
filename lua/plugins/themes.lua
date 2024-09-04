@@ -1,0 +1,31 @@
+return {
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    opts = {
+      flavour = "mocha",
+    },
+  },
+  {
+    "folke/tokyonight.nvim",
+    lazy = true,
+    opts = {
+      style = "moon",
+    },
+  },
+  {
+    "sainnhe/everforest",
+    opts = {
+      background = "soft",
+      enable_italic = true,
+      show_eob = true,
+      diagnostic_text_highlight = true,
+    },
+  },
+  {
+    "sainnhe/gruvbox-material",
+    opts = {
+      background = "soft",
+    },
+  },
+}
