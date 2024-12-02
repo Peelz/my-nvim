@@ -2,10 +2,37 @@ return {
   -- add treesitter support for scala
   -- {
   --   "nvim-treesitter/nvim-treesitter",
-  --   opts = function(_, opts)
-  --     vim.list_extend(opts.ensure_installed, { "scala", "java" })
-  --   end,
+  --   opts = {
+  --     ensure_installed = { "scala" },
+  --   },
   -- },
+  {
+    "mfussenegger/nvim-dap",
+    optional = true,
+    opts = function()
+      -- Debug settings
+      local dap = require("dap")
+      dap.configurations.scala = {
+        {
+          type = "scala",
+          request = "launch",
+          name = "RunOrTest",
+          metals = {
+            runType = "runOrTestFile",
+            --args = { "firstArg", "secondArg", "thirdArg" }, -- here just as an example
+          },
+        },
+        {
+          type = "scala",
+          request = "launch",
+          name = "Test Target",
+          metals = {
+            runType = "testTarget",
+          },
+        },
+      }
+    end,
+  },
   -- {
   --   "j-hui/fidget.nvim",
   --   tag = "legacy",
