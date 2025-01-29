@@ -48,10 +48,9 @@ return {
   opts = {
     window = {
       mappings = {
-        ["L"] = open_all_subnodes,
-        ["Y"] = {
-          copypath,
-          desc = "Copy Path to Clipboard",
+        ["L"] = {
+          open_all_subnodes,
+          desc = "Open nodes",
         },
       },
     },
