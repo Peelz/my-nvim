@@ -19,3 +19,4 @@ vim.filetype.add {
     j2 = 'jinja',
   },
 }
+vim.g.autoformat = false
