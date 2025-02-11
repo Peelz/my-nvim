@@ -3,4 +3,10 @@ return {
   config = function()
     return require("tmux").setup()
   end,
+  opts = {
+    copy_sync = {
+      enable = true,
+      sync_clipboard = true,
+    },
+  },
 }
