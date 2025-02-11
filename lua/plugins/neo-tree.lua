@@ -44,15 +44,15 @@ local function copypath(state)
 end
 
 return {
-  -- "nvim-neo-tree/neo-tree.nvim",
-  -- opts = {
-  --   window = {
-  --     mappings = {
-  --       ["L"] = {
-  --         open_all_subnodes,
-  --         desc = "Open nodes",
-  --       },
-  --     },
-  --   },
-  -- },
+  "nvim-neo-tree/neo-tree.nvim",
+  opts = {
+    window = {
+      mappings = {
+        ["L"] = {
+          open_all_subnodes,
+          desc = "Open nodes",
+        },
+      },
+    },
+  },
 }
