@@ -9,6 +9,7 @@ vim.o.statuscolumn = "%s %l %r"
 -- Set to "basedpyright" to use basedpyright instead of pyright.
 vim.g.lazyvim_python_lsp = "basedpyright"
 -- vim.g.lazyvim_python_lsp = "pyright"
+
 -- Set to "ruff_lsp" to use the old LSP implementation version.
 vim.g.lazyvim_python_ruff = "ruff"
 vim.o.termguicolors = true
@@ -20,7 +21,10 @@ vim.filetype.add({
     j2 = "jinja",
   },
 })
+
+-- disable autoformat
 vim.g.autoformat = false
+
 -- to set clipboard copy
 vim.o.clipboard = "unnamedplus"
 local function paste()
