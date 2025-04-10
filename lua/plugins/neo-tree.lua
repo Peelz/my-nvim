@@ -42,17 +42,16 @@ local function copypath(state)
     vim.notify("Copied: " .. result)
   end)
 end
-
 return {
-  "nvim-neo-tree/neo-tree.nvim",
-  opts = {
-    window = {
-      mappings = {
-        ["L"] = {
-          open_all_subnodes,
-          desc = "Open nodes",
-        },
-      },
-    },
-  },
+  -- "nvim-neo-tree/neo-tree.nvim",
+  -- opts = {
+  --   window = {
+  --     mappings = {
+  --       ["L"] = {
+  --         open_all_subnodes,
+  --         desc = "Open nodes",
+  --       },
+  --     },
+  --   },
+  -- },
 }
