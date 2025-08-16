@@ -45,3 +45,7 @@ vim.g.clipboard = {
     ["*"] = paste,
   },
 }
+
+vim.o.exrc = true
+vim.o.secure = true
+

@@ -9,3 +9,4 @@ foo.*
 data
 lazy-lock.json
 .DS_Store
+lua/config/local.lua
