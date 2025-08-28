@@ -5,6 +5,7 @@ return {
     name = "catppuccin",
     opts = {
       flavour = "macchiato",
+      integrations = { blink_cmp = true },
     },
     specs = {
       {
