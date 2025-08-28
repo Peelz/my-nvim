@@ -1,82 +1,9 @@
 local map = vim.keymap.set
 
 return {
-  -- add treesitter support for scala
-  -- {
-  --   "nvim-treesitter/nvim-treesitter",
-  --   opts = {
-  --     ensure_installed = { "scala" },
-  --   },
-  -- },
-  -- {
-  --   keys = {
-  --     { "<leader>cW", function () require('metals').hover_worksheet() end, desc = "Metals Worksheet" },
-  --     { "<leader>cM", function () require('telescope').extensions.metals.commands() end, desc = "Telescope Metals Commands" },
-  --   },
-  --   "mfussenegger/nvim-dap",
-  --   optional = true,
-  --   opts = function()
-  --     -- Debug settings
-  --     local dap = require("dap")
-  --     dap.configurations.scala = {
-  --       {
-  --         type = "scala",
-  --         request = "launch",
-  --         name = "RunOrTest",
-  --         metals = {
-  --           runType = "runOrTestFile",
-  --           --args = { "firstArg", "secondArg", "thirdArg" }, -- here just as an example
-  --         },
-  --       },
-  --       {
-  --         type = "scala",
-  --         request = "launch",
-  --         name = "Test Target",
-  --         metals = {
-  --           runType = "testTarget",
-  --         },
-  --       },
-  --     }
-  --   end,
-  -- },
   {
     "scalameta/nvim-metals",
     dependencies = {
-      "nvim-lua/plenary.nvim",
-      {
-        "j-hui/fidget.nvim",
-        opts = {},
-      },
-      {
-        "mfussenegger/nvim-dap",
-        config = function(self, opts)
-          -- Debug settings if you're using nvim-dap
-          local dap = require("dap")
-
-          dap.configurations.scala = {
-            {
-              type = "scala",
-              request = "launch",
-              name = "RunOrTest",
-              metals = {
-                runType = "runOrTestFile",
-                --args = { "firstArg", "secondArg", "thirdArg" }, -- here just as an example
-              },
-            },
-            {
-              type = "scala",
-              request = "launch",
-              name = "Test Target",
-              metals = {
-                runType = "testTarget",
-              },
-            },
-          }
-        end,
-      },
-      {
-        "hrsh7th/cmp-nvim-lsp"
-      }
     },
     keys = {
       -- {
