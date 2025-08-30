@@ -1,3 +1,4 @@
+if true then return {} end
 local map = vim.keymap.set
 
 return {
@@ -13,13 +14,13 @@ return {
       --   end,
       --   desc = "Metals Worksheet",
       -- },
-      {
-        "<leader>cM",
-        function()
-          require("telescope").extensions.metals.commands()
-        end,
-        desc = "Metals Commands",
-      },
+      -- {
+      --   "<leader>cM",
+      --   function()
+      --     require("telescope").extensions.metals.commands()
+      --   end,
+      --   desc = "Metals Commands",
+      -- },
     },
     ft = { "scala", "sbt", "java" },
     opts = function()

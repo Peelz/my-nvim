@@ -50,3 +50,6 @@ vim.o.exrc = true
 vim.o.secure = true
 vim.g.lazyvim_blink_main = true
 
+
+
+
