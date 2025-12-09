@@ -1,6 +1,12 @@
 -- if true then return {} end
 
 return {
+  -- {
+  --   import = "lazyvim.plugins.extras.ai.avante",
+  --   opts = {
+  --     provider = "claude-code",
+  --   }
+  -- }
   -- "yetone/avante.nvim",
   -- -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
   -- -- ⚠️ must add this setting! ! !
