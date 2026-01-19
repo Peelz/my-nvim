@@ -1,38 +1,38 @@
 return {
-  -- {
-  --   "neovim/nvim-lspconfig",
-  --   opts = {
-  --     servers = {
-  --       typespec = {
-  --         cmd = { "typespec-language-server", "--stdio" },
-  --         filetypes = { "typespec", "tsp" },
-  --         root_dir = require("lspconfig.util").root_pattern(
-  --           "package.json",
-  --           "tspconfig.yaml",
-  --           ".git"
-  --         ),
-  --         settings = {},
-  --       },
-  --     },
-  --   },
-  -- },
-  -- {
-  --   "nvim-treesitter/nvim-treesitter",
-  --   opts = function(_, opts)
-  --     vim.list_extend(opts.ensure_installed or {}, { "typespec" })
-  --   end,
-  -- },
-  -- {
-  --   "stevearc/conform.nvim",
-  --   opts = function(_, opts)
-  --     opts.formatters.typespec_format = {
-  --       command = "tsp-format",
-  --       args = { "$FILENAME" },
-  --       stdin = false,
-  --     }
-  --     opts.formatters_by_ft = opts.formatters_by_ft or {}
-  --     opts.formatters_by_ft.typespec = { "typespec_format" }
-  --     opts.formatters_by_ft.tsp = { "typespec_format" }
-  --   end,
-  -- },
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        typespec = {
+          cmd = { "typespec-language-server", "--stdio" },
+          filetypes = { "typespec", "tsp" },
+          root_dir = require("lspconfig.util").root_pattern(
+            "package.json",
+            "tspconfig.yaml",
+            ".git"
+          ),
+          settings = {},
+        },
+      },
+    },
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = function(_, opts)
+      vim.list_extend(opts.ensure_installed or {}, { "typespec" })
+    end,
+  },
+  {
+    "stevearc/conform.nvim",
+    opts = function(_, opts)
+      opts.formatters.typespec_format = {
+        command = "tsp-format",
+        args = { "$FILENAME" },
+        stdin = false,
+      }
+      opts.formatters_by_ft = opts.formatters_by_ft or {}
+      opts.formatters_by_ft.typespec = { "typespec_format" }
+      opts.formatters_by_ft.tsp = { "typespec_format" }
+    end,
+  },
 }
