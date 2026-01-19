@@ -6,11 +6,7 @@ return {
         typespec = {
           cmd = { "typespec-language-server", "--stdio" },
           filetypes = { "typespec", "tsp" },
-          root_dir = require("lspconfig.util").root_pattern(
-            "package.json",
-            "tspconfig.yaml",
-            ".git"
-          ),
+          root_dir = require("lspconfig.util").root_pattern("package.json", "tspconfig.yaml", ".git"),
           settings = {},
         },
       },
