@@ -6,6 +6,8 @@ vim.o.relativenumber = true
 vim.o.number = true
 vim.o.statuscolumn = "%s %l %r "
 
+vim.o.termguicolors = true
+
 -- Set to "basedpyright" to use basedpyright instead of pyright.
 vim.g.lazyvim_python_lsp = "basedpyright"
 -- vim.g.lazyvim_python_lsp = "pyright"

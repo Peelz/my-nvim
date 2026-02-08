@@ -4,6 +4,11 @@ return {
   lazy = false,
   ---@type snacks.Config
   opts = {
+    terminal = {
+      -- win = {
+      --   position = "float",
+      -- },
+    },
     picker = {
       sources = {
         explorer = {
