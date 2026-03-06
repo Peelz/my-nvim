@@ -40,3 +40,25 @@ vim.api.nvim_create_autocmd("VimEnter", {
     end, 100)
   end,
 })
+
+-- Autosave with 0.3s delay after cursor movement or window change
+-- local autosave_timer = nil
+--
+-- local autosave_delay = 1000 -- 0.3 seconds in milliseconds
+-- local function autosave()
+--   if vim.bo.modifiable and not vim.bo.readonly and vim.fn.expand("%:t") ~= "" then
+--     vim.cmd("silent! write")
+--   end
+-- end
+--
+-- local function schedule_autosave()
+--   if autosave_timer then
+--     autosave_timer:stop()
+--   end
+--   autosave_timer = vim.defer_fn(autosave, autosave_delay)
+-- end
+--
+-- vim.api.nvim_create_autocmd({ "WinEnter", "FocusLost" }, {
+--   pattern = "*",
+--   callback = schedule_autosave,
+-- })

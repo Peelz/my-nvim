@@ -52,3 +52,5 @@ vim.o.exrc = true
 vim.o.secure = true
 vim.g.lazyvim_blink_main = true
 
+-- Ignore lsp for root project
+vim.g.root_spec = { ".git", "cwd" }

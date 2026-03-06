@@ -10,19 +10,37 @@ return {
   opts = {
     autoread = true,
     provider = {
-      enabled = "wezterm",
+      enabled = "snacks",
       tmux = {},
       wezterm = {},
+      snacks = {},
+      terminal = {},
     },
   },
   keys = {
+    {
+      "<M-a>a",
+      function()
+        require("opencode").ask()
+      end,
+      mode = { "n", "x" },
+      desc = "Ask opencode",
+    },
+    {
+      "<M-a>b",
+      function()
+        require("opencode").ask("@buffer: ")
+      end,
+      mode = { "n", "x" },
+      desc = "Ask current buffer",
+    },
     {
       "<M-a>o",
       function()
         require("opencode").ask("@this: ", { submit = true })
       end,
       mode = { "n", "x" },
-      desc = "Ask opencode…",
+      desc = "Ask @this opencode…",
     },
     {
       "<M-a>c",

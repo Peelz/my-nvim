@@ -12,6 +12,8 @@ return {
     picker = {
       sources = {
         explorer = {
+          auto_close = true,
+          focus = "list",
           actions = {
             recursive_toggle = function(picker, item)
               local Actions = require("snacks.explorer.actions")

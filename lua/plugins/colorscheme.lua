@@ -4,15 +4,16 @@ return {
     lazy = true,
     name = "catppuccin",
     opts = {
-      flavour = "macchiato",
+      flavour = "mocha",
       integrations = { blink_cmp = true },
+      transparent_background = true,
     },
   },
   {
     "folke/tokyonight.nvim",
     lazy = true,
     opts = {
-      style = "storm",
+      style = "moon",
       transparent = true,
       styles = {
         sidebars = "transparent",
