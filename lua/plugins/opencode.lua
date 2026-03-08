@@ -1,10 +1,29 @@
-return {
+local config = {
   "NickvanDyke/opencode.nvim",
   dependencies = {
-    -- Recommended for `ask()` and `select()`.
-    -- Required for `snacks` provider.
-    ---@module 'snacks' <- Loads `snacks.nvim` types for configuration intellisense.
-    { "folke/snacks.nvim", opts = { input = {}, picker = {}, terminal = {} } },
+    {
+      -- `snacks.nvim` integration is recommended, but optional
+      ---@module "snacks" <- Loads `snacks.nvim` types for configuration intellisense
+      "folke/snacks.nvim",
+      optional = true,
+      opts = {
+        input = {}, -- Enhances `ask()`
+        picker = { -- Enhances `select()`
+          actions = {
+            opencode_send = function(...)
+              return require("opencode").snacks_picker_send(...)
+            end,
+          },
+          win = {
+            input = {
+              keys = {
+                ["<a-a>"] = { "opencode_send", mode = { "n", "i" } },
+              },
+            },
+          },
+        },
+      },
+    },
   },
   config = function(_, opts) end,
   opts = {
@@ -59,7 +78,7 @@ return {
       desc = "Execute opencode action…",
     },
     {
-      "<C-.>",
+      "<M-.>",
       function()
         require("opencode").toggle()
       end,
@@ -92,20 +111,24 @@ return {
       expr = true,
     },
     {
-      "<M-a>u",
+      "<M-S-p>",
       function()
         require("opencode").command("session.half.page.up")
       end,
+      mode = { "n", "t" },
       desc = "Scroll opencode up",
     },
     {
-      "<M-a>d",
+      "<M-S-n>",
       function()
         require("opencode").command("session.half.page.down")
       end,
+      mode = { "n", "t" },
       desc = "Scroll opencode down",
     },
     { "+", "<C-a>", desc = "Increment under cursor", noremap = true },
     { "-", "<C-x>", desc = "Decrement under cursor", noremap = true },
   },
 }
+
+return config
